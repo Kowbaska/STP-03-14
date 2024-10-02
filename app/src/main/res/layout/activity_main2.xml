@@ -1,4 +1,3 @@
-<!-- activity_second.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,24 +7,21 @@
         android:id="@+id/brandTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_brand"
-        android:textSize="25sp" />
+        android:text="Brand: " />
 
     <TextView
         android:id="@+id/modelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Model: "
         android:layout_below="@id/brandTextView"
-        android:layout_marginTop="8dp"
-        android:text="@string/label_model"
-        android:textSize="25sp" />
+        android:layout_marginTop="8dp" />
 
     <TextView
         android:id="@+id/priceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Price: "
         android:layout_below="@id/modelTextView"
-        android:layout_marginTop="8dp"
-        android:text="@string/label_price"
-        android:textSize="25sp" />
+        android:layout_marginTop="8dp" />
 </RelativeLayout>

@@ -1,9 +1,11 @@
 package com.example.test;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.test.MainActivityPhoneModel;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -18,13 +20,13 @@ public class MainActivity2 extends AppCompatActivity {
         modelTextView = findViewById(R.id.modelTextView);
         priceTextView = findViewById(R.id.priceTextView);
 
-        Intent intent = getIntent();
-        Phone phone = (Phone) intent.getSerializableExtra("phone");
+        // Отримання даних з Intent
+        MainActivityPhoneModel phoneModel = (MainActivityPhoneModel) getIntent().getSerializableExtra("phoneModel");
 
-        if (phone != null) {
-            brandTextView.setText("Brand: " + phone.getBrand());
-            modelTextView.setText("Model: " + phone.getModel());
-            priceTextView.setText("Price: $" + phone.getPrice());
+        if (phoneModel != null) {
+            brandTextView.setText("Brand: " + phoneModel.getBrand());
+            modelTextView.setText("Model: " + phoneModel.getModel());
+            priceTextView.setText("Price: $" + phoneModel.getPrice());
         }
     }
 }
